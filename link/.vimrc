@@ -48,7 +48,7 @@ endif
 " Clear last search
 map <silent> <leader>/ <Esc>:nohlsearch<CR>
 
-gnore things
+" Ignore things
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 set wildignore+=*/bower_components/*,*/node_modules/*
 set wildignore+=*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/log/*,*/tmp/*

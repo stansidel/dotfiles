@@ -83,8 +83,6 @@ set hlsearch
 set ignorecase
 " Highlight dynamically as pattern is typed
 set incsearch
-" Always show status line
-set laststatus=2
 " Enable mouse in all modes
 set mouse=a
 " Disable error bells
@@ -183,13 +181,6 @@ highlight lCursor guifg=NONE guibg=Cyan
 imap <C-f> <C-^>
 setlocal spell spelllang=ru_yo,en_us
 
-" https://github.com/junegunn/vim-plug
-" Reload .vimrc and :PlugInstall to install plugins.
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'terryma/vim-multiple-cursors'
-call plug#end()
-
 " Build and run certian files
 autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%')<CR>
 autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && '.shellescape('%:r').' && rm '.shellescape('%:r')<CR>
@@ -214,9 +205,5 @@ autocmd vimrc VimEnter *
   \   NERDTree |
   \ end
 
-" https://github.com/junegunn/vim-plug
-" Reload .vimrc and :PlugInstall to install plugins.
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'terryma/vim-multiple-cursors'
-call plug#end()
+source $HOME/.vim/include/plugins.vim
+source $HOME/.vim/include/statusline.vim

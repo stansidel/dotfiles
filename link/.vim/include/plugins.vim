@@ -10,9 +10,18 @@ Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'parkr/vim-jekyll'
-if has('mac')
-  Plug 'junegunn/vim-xmark'
-else
-  Plug 'JamshedVesuna/vim-markdown-preview'
-endif
+Plug 'kannokanno/previm'
+" if has('mac')
+"   Plug 'junegunn/vim-xmark'
+" else
+"   Plug 'JamshedVesuna/vim-markdown-preview'
+" endif
+Plug 'blindFS/vim-reveal'
 call plug#end()
+
+" previm
+let g:previm_open_cmd = 'open -a Safari'
+
+" Vim Reveal
+let g:reveal_config = {
+    \'path': '$HOME/.vim/files/reveal.js/'}

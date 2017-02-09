@@ -31,3 +31,6 @@
 [submodule "rbenv-update"]
 	path = link/.rbenv/plugins/rbenv-update
 	url = git://github.com/rkh/rbenv-update.git
+[submodule "link/.vim/files/reveal.js"]
+	path = link/.vim/files/reveal.js
+	url = https://github.com/hakimel/reveal.js/

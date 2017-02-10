@@ -10,7 +10,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'parkr/vim-jekyll'
-Plug 'kannokanno/previm'
+" Plug 'kannokanno/previm'
+" Plug 'stansidel/previm', { 'branch': 'enhanced' }
+Plug 'git@github.com:stansidel/previm.git', { 'branch': 'enhanced' }
 " if has('mac')
 "   Plug 'junegunn/vim-xmark'
 " else

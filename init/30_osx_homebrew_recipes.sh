@@ -16,6 +16,7 @@ recipes=(
   tree
   wget
   coreutils
+  ctags
 )
 
 brew_install_recipes

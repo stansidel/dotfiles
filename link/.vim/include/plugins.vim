@@ -20,6 +20,7 @@ Plug 'git@github.com:stansidel/previm.git', { 'branch': 'enhanced' }
 " endif
 Plug 'blindFS/vim-reveal'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'craigemery/vim-autotag' " See http://ricostacruz.com/til/navigate-code-with-ctags
 call plug#end()
 
 " previm

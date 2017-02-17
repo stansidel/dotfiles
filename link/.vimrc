@@ -185,7 +185,6 @@ setlocal spell spelllang=ru_yo,en_us
 autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%')<CR>
 autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && '.shellescape('%:r').' && rm '.shellescape('%:r')<CR>
 autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && '.shellescape('%:r').' && rm '.shellescape('%:r')<CR>
-
 " PLUGINS
 
 " NERDTree

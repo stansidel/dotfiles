@@ -95,3 +95,6 @@ function cdf() { # short for `cdfinder`
 
 # AFK shortcut
 alias afk='pmset displaysleepnow'
+
+# Ctags
+alias ctags="`brew --prefix`/bin/ctags"

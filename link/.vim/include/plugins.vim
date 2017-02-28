@@ -45,3 +45,6 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 endif
 let g:ctrlp_show_hidden = 1
+
+" Vim Autotag
+let g:autotagTagsFile="tags"

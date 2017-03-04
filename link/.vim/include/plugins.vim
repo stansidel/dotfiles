@@ -22,6 +22,7 @@ Plug 'blindFS/vim-reveal'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'craigemery/vim-autotag' " See http://ricostacruz.com/til/navigate-code-with-ctags
 Plug 'bkad/CamelCaseMotion'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 " previm

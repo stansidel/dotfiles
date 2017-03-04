@@ -21,6 +21,7 @@ Plug 'git@github.com:stansidel/previm.git', { 'branch': 'enhanced' }
 Plug 'blindFS/vim-reveal'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'craigemery/vim-autotag' " See http://ricostacruz.com/til/navigate-code-with-ctags
+Plug 'bkad/CamelCaseMotion'
 call plug#end()
 
 " previm
@@ -48,3 +49,6 @@ let g:ctrlp_show_hidden = 1
 
 " Vim Autotag
 let g:autotagTagsFile="tags"
+
+" bkad/CamelCaseMotion
+call camelcasemotion#CreateMotionMappings('<leader>')

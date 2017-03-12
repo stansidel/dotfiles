@@ -23,7 +23,30 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'craigemery/vim-autotag' " See http://ricostacruz.com/til/navigate-code-with-ctags
 Plug 'bkad/CamelCaseMotion'
 Plug 'tpope/vim-surround'
+Plug 'keith/swift.vim'
+Plug 'vim-syntastic/syntastic'
+if has('mac')
+    Plug 'gfontenot/vim-xcode'
+end
 call plug#end()
+
+" NERDTree
+let NERDTreeShowHidden = 1
+let NERDTreeMouseMode = 2
+let NERDTreeMinimalUI = 1
+map <leader>n :NERDTreeToggle<CR>
+map <leader>N :NERDTreeFind<CR>
+autocmd vimrc StdinReadPre * let s:std_in=1
+" If no file or directory arguments are specified, open NERDtree.
+" If a directory is specified as the only argument, open it in NERDTree.
+autocmd vimrc VimEnter *
+  \ if argc() == 0 && !exists("s:std_in") |
+  \   NERDTree |
+  \ elseif argc() == 1 && isdirectory(argv(0)) |
+  \   bd |
+  \   exec 'cd' fnameescape(argv(0)) |
+  \   NERDTree |
+  \ end
 
 " previm
 let g:previm_open_cmd = 'open -a Safari'

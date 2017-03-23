@@ -185,24 +185,6 @@ setlocal spell spelllang=ru_yo,en_us
 autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%')<CR>
 autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && '.shellescape('%:r').' && rm '.shellescape('%:r')<CR>
 autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && '.shellescape('%:r').' && rm '.shellescape('%:r')<CR>
-" PLUGINS
-
-" NERDTree
-let NERDTreeShowHidden = 1
-let NERDTreeMouseMode = 2
-let NERDTreeMinimalUI = 1
-map <leader>n :NERDTreeToggle<CR>
-autocmd vimrc StdinReadPre * let s:std_in=1
-" If no file or directory arguments are specified, open NERDtree.
-" If a directory is specified as the only argument, open it in NERDTree.
-autocmd vimrc VimEnter *
-  \ if argc() == 0 && !exists("s:std_in") |
-  \   NERDTree |
-  \ elseif argc() == 1 && isdirectory(argv(0)) |
-  \   bd |
-  \   exec 'cd' fnameescape(argv(0)) |
-  \   NERDTree |
-  \ end
 
 source $HOME/.vim/include/plugins.vim
 source $HOME/.vim/include/statusline.vim

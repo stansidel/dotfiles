@@ -176,6 +176,8 @@ function gstat() {
   unset IFS
 }
 
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
 # OSX-specific Git shortcuts
 if is_osx; then
   alias gdk='git ksdiff'

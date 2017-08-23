@@ -188,3 +188,4 @@ autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%').' -o '
 
 source $HOME/.vim/include/plugins.vim
 source $HOME/.vim/include/statusline.vim
+source $HOME/.vim/include/visual-at.vim

@@ -183,8 +183,8 @@ setlocal spell spelllang=ru_yo,en_us
 
 " Build and run certian files
 autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%:p')<CR>
-autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%:p').' -o '.shellescape('%:p:r').' && (cd '.shellescape('%:p:h').' && exec '.shellescape('%:p:r').' && cd -) && rm '.shellescape('%:p:r')<CR>
-autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%:p').' -o '.shellescape('%:p:r').' && (cd '.shellescape('%:p:h').' && exec '.shellescape('%:p:r').' && cd -) && rm '.shellescape('%:p:r')<CR>
+autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%:p:h').'/*.cpp -o '.shellescape('%:p:r').' && (cd '.shellescape('%:p:h').' && exec '.shellescape('%:p:r').' && cd -) && rm '.shellescape('%:p:r')<CR>
+autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%:p:h').'/*.cpp -o '.shellescape('%:p:r').' && (cd '.shellescape('%:p:h').' && exec '.shellescape('%:p:r').' && cd -) && rm '.shellescape('%:p:r')<CR>
 
 source $HOME/.vim/include/plugins.vim
 source $HOME/.vim/include/statusline.vim

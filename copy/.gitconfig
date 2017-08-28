@@ -76,6 +76,10 @@
 		fi \
 	}; f"
 
+    # A fake commit message
+    yolo = "!git commit -m \"$(curl -s whatthecommit.com/index.txt)\""
+	cay = "!git add -A && git commit -avm \"$(curl -s whatthecommit.com/index.txt)\""
+
 [apply]
 
 	# Detect whitespace errors when applying a patch

@@ -76,3 +76,7 @@ let g:autotagTagsFile="tags"
 
 " bkad/CamelCaseMotion
 call camelcasemotion#CreateMotionMappings('<leader>')
+
+" syntastic
+" https://stackoverflow.com/a/18234204/758990
+let g:syntastic_cpp_compiler_options = ' -std=gnu++1z'

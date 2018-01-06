@@ -26,6 +26,8 @@ Plug 'tpope/vim-surround'
 Plug 'keith/swift.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'davidoc/taskpaper.vim'
+Plug 'vim-scripts/vim-auto-save' 
+Plug 'djoshea/vim-autoread'
 if has('mac')
     Plug 'gfontenot/vim-xcode'
 end
@@ -82,3 +84,6 @@ call camelcasemotion#CreateMotionMappings('<leader>')
 " https://stackoverflow.com/a/18234204/758990
 let g:syntastic_cpp_compiler_options = ' -std=gnu++1z'
 
+" Autosave taskpaper files
+autocmd filetype taskpaper let g:auto_save = 1
+autocmd filetype taskpaper :WatchForChanges!

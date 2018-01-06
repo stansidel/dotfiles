@@ -25,6 +25,7 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'tpope/vim-surround'
 Plug 'keith/swift.vim'
 Plug 'vim-syntastic/syntastic'
+Plug 'davidoc/taskpaper.vim'
 if has('mac')
     Plug 'gfontenot/vim-xcode'
 end

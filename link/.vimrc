@@ -189,6 +189,10 @@ autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%:p'
 autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%:p:h').'/*.cpp -o '.shellescape('%:p:r').' && (cd '.shellescape('%:p:h').' && exec '.shellescape('%:p:r').' && cd -) && rm '.shellescape('%:p:r')<CR>
 autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%:p:h').'/*.cpp -o '.shellescape('%:p:r').' -std=gnu++1z && (cd '.shellescape('%:p:h').' && exec '.shellescape('%:p:r').' && cd -) && rm '.shellescape('%:p:r')<CR>
 
+" Date and time stamps
+cab dstmp <C-R>=strftime("%Y-%m-%d")<CR>
+cab tstmp <C-R>=strftime("%Y-%m-%d-%H-%M")<CR>
+
 source $HOME/.vim/include/plugins.vim
 source $HOME/.vim/include/statusline.vim
 source $HOME/.vim/include/visual-at.vim

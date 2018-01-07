@@ -177,7 +177,8 @@ set tabstop=4 shiftwidth=4 expandtab autoindent smartindent
 set exrc secure
 
 " Russian language. See https://habrahabr.ru/post/98393/
-set keymap=russian-jcukenwin
+" set keymap=russian-jcukenwin
+set keymap=russian-jcukenmac
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan

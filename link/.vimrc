@@ -177,15 +177,18 @@ set tabstop=4 shiftwidth=4 expandtab autoindent smartindent
 set exrc secure
 
 " Russian language. See https://habrahabr.ru/post/98393/
-" set keymap=russian-jcukenwin
-set keymap=russian-jcukenmac
+if has('mac')
+    set keymap=russian-jcukenmac
+else
+    set keymap=russian-jcukenwin
+end
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
 imap <C-f> <C-^>
 setlocal spell spelllang=ru_yo,en_us
 
-" Build and run certian files
+" Build and run certain files
 autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%:p')<CR>
 autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%:p:h').'/*.cpp -o '.shellescape('%:p:r').' && (cd '.shellescape('%:p:h').' && exec '.shellescape('%:p:r').' && cd -) && rm '.shellescape('%:p:r')<CR>
 autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%:p:h').'/*.cpp -o '.shellescape('%:p:r').' -std=gnu++1z && (cd '.shellescape('%:p:h').' && exec '.shellescape('%:p:r').' && cd -) && rm '.shellescape('%:p:r')<CR>

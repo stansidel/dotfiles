@@ -4,7 +4,7 @@ set go-=L " Hide left scrollbar
 
 " Use the Solarized Dark theme
 set background=dark
-colorscheme solarized
+colorscheme rupza
 " Use 14pt Monaco
 set guifont=Monaco:h14
 " Don’t blink cursor in normal mode

@@ -7,7 +7,7 @@ else
   export EDITOR='vim'
 fi
 
-export VISUAL="$EDITOR"
+export VISUAL="$EDITOR -f"
 alias q="$EDITOR"
 alias qv="q $DOTFILES/link/.{,g}vimrc +'cd $DOTFILES'"
 alias qs="q $DOTFILES"

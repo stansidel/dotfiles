@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
-Plug 'parkr/vim-jekyll'
+" Plug 'parkr/vim-jekyll'
 " Plug 'kannokanno/previm'
 " Plug 'stansidel/previm', { 'branch': 'enhanced' }
 Plug 'git@github.com:stansidel/previm.git', { 'branch': 'enhanced' }
@@ -28,6 +28,8 @@ Plug 'vim-syntastic/syntastic'
 Plug 'davidoc/taskpaper.vim'
 Plug 'vim-scripts/vim-auto-save' 
 Plug 'djoshea/vim-autoread'
+Plug 'tpope/vim-markdown'
+Plug 'reedes/vim-pencil'
 if has('mac')
     Plug 'gfontenot/vim-xcode'
 end

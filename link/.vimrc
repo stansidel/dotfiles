@@ -193,6 +193,7 @@ autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%:p'
 autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%:p:h').'/*.cpp -o '.shellescape('%:p:r').' && (cd '.shellescape('%:p:h').' && exec '.shellescape('%:p:r').' && cd -) && rm '.shellescape('%:p:r')<CR>
 autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%:p:h').'/*.cpp -o '.shellescape('%:p:r').' -std=gnu++1z && (cd '.shellescape('%:p:h').' && exec '.shellescape('%:p:r').' && cd -) && rm '.shellescape('%:p:r')<CR>
 autocmd filetype taskpaper set noet ci pi sts=0 sw=4 ts=4
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Date and time stamps
 cab dstmp <C-R>=strftime("%Y-%m-%d")<CR>

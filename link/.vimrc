@@ -186,6 +186,7 @@ set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
 imap <C-f> <C-^>
+imap <C-z> <C-^>
 setlocal spell spelllang=ru_yo,en_us
 
 " Build and run certain files

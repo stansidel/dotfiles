@@ -5,6 +5,7 @@
 # Top secret stuff!
 /link/.ssh/*id_*
 /link/.ssh/*.pem
+/link/.ssh/google_compute_*
 /link/.ssh/known_hosts*
 /link/.ssh/authorized_keys
 /link/.ssh/config

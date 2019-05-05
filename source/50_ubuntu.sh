@@ -6,6 +6,8 @@ alias update="sudo apt-get -qq update && sudo apt-get upgrade"
 alias install="sudo apt-get install"
 alias remove="sudo apt-get remove"
 alias search="apt-cache search"
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
 
 # Make 'less' more.
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"

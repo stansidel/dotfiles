@@ -4,8 +4,5 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# added by Anaconda3 5.1.0 installer
-export PATH="/anaconda3/bin:$PATH"
-
 # added by Anaconda3 5.2.0 installer
 export PATH="/anaconda3/bin:$PATH"

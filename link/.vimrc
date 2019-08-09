@@ -127,8 +127,8 @@ autocmd vimrc BufReadPost *
   \   exe "normal g`\"" |
   \ endif
 
-" F10: Source .vimrc & .gvimrc files
-nmap <F10> :call SourceConfigs()<CR>
+" Shift-F10: Source .vimrc & .gvimrc files
+nmap <S-F10> :call SourceConfigs()<CR>
 
 if !exists("*SourceConfigs")
   function! SourceConfigs()
@@ -142,8 +142,8 @@ if !exists("*SourceConfigs")
   endfunction
 endif
 
-" F7: Paste a random commit message
-nmap <F7> :.-1read !curl -s "http://whatthecommit.com/index.txt"<CR> 
+" Shift-F7: Paste a random commit message
+nmap <S-F7> :.-1read !curl -s "http://whatthecommit.com/index.txt"<CR> 
 
 " Ctrl-J/K/L/H select split
 nnoremap <C-J> <C-W>j
@@ -199,6 +199,11 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Date and time stamps
 cab dstmp <C-R>=strftime("%Y-%m-%d")<CR>
 cab tstmp <C-R>=strftime("%Y-%m-%d-%H-%M")<CR>
+
+" Buffers
+map <F10> :bprevious<CR>
+map <F11> :bnext<CR>
+map <F2> :NERDTreeToggle<CR>
 
 source $HOME/.vim/include/plugins.vim
 source $HOME/.vim/include/statusline.vim

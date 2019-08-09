@@ -30,6 +30,7 @@ Plug 'vim-scripts/vim-auto-save'
 Plug 'djoshea/vim-autoread'
 Plug 'tpope/vim-markdown'
 Plug 'reedes/vim-pencil'
+Plug 'vim-airline/vim-airline'
 if has('mac')
     Plug 'gfontenot/vim-xcode'
 end
@@ -89,3 +90,9 @@ let g:syntastic_cpp_compiler_options = ' -std=gnu++1z'
 " Autosave taskpaper files
 autocmd filetype taskpaper let g:auto_save = 1
 autocmd filetype taskpaper :WatchForChanges!
+
+" Airline
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'

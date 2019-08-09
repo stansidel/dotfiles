@@ -127,8 +127,8 @@ autocmd vimrc BufReadPost *
   \   exe "normal g`\"" |
   \ endif
 
-" F10: Source .vimrc & .gvimrc files
-nmap <F10> :call SourceConfigs()<CR>
+" Shift-F10: Source .vimrc & .gvimrc files
+nmap <S-F10> :call SourceConfigs()<CR>
 
 if !exists("*SourceConfigs")
   function! SourceConfigs()
@@ -142,8 +142,8 @@ if !exists("*SourceConfigs")
   endfunction
 endif
 
-" F7: Paste a random commit message
-nmap <F7> :.-1read !curl -s "http://whatthecommit.com/index.txt"<CR> 
+" Shift-F7: Paste a random commit message
+nmap <S-F7> :.-1read !curl -s "http://whatthecommit.com/index.txt"<CR> 
 
 " Ctrl-J/K/L/H select split
 nnoremap <C-J> <C-W>j
@@ -189,6 +189,7 @@ imap <C-f> <C-^>
 imap <C-z> <C-^>
 setlocal spell spelllang=ru_yo,en_us
 
+
 " Build and run certain files
 autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%:p')<CR>
 autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%:p:h').'/*.cpp -o '.shellescape('%:p:r').' && (cd '.shellescape('%:p:h').' && exec '.shellescape('%:p:r').' && cd -) && rm '.shellescape('%:p:r')<CR>
@@ -199,6 +200,11 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Date and time stamps
 cab dstmp <C-R>=strftime("%Y-%m-%d")<CR>
 cab tstmp <C-R>=strftime("%Y-%m-%d-%H-%M")<CR>
+
+" Buffers
+map <F10> :bprevious<CR>
+map <F11> :bnext<CR>
+map <F2> :NERDTreeToggle<CR>
 
 source $HOME/.vim/include/plugins.vim
 source $HOME/.vim/include/statusline.vim
